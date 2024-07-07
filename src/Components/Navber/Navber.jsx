@@ -1,7 +1,7 @@
-import React from 'react'
 import { IoMdSearch } from "react-icons/io";
 import Logo from "../../assets/logo.png"
 import { FaCartShopping } from 'react-icons/fa6';
+import DarkMode from './DarkMode';
 const Navber = () => {
   return (
     <div className='shadow-md bg-white dark:bg-gray-900 dark:text-white duration-200 relative z-40'>
@@ -20,7 +20,7 @@ const Navber = () => {
                     </a>
                 </div>
                 {/* serch bar and order button */}
-                <div>
+                <div className='flex justify-between items-center gap-4'>
                     <div className='relative group hidden sm:block'>
                      <input type="text" placeholder='search'
                      className='w-[200px] sm:w-[200px]group-hover:W-[300px] transition-all duration-300 rounded-full border border-gray-300 px-2 py-1 focus:outline-none focus:border-1 focus:border-primary' 
@@ -41,9 +41,16 @@ const Navber = () => {
                   <span
                   className='group-hover:block hidden transition-all duration-200'
                   >Order</span>
-                  <FaCartShopping></FaCartShopping>  
+                  <FaCartShopping
+                   className='text-xl text-white drop-shadow-sm
+                   cursor-pointer'
+                  ></FaCartShopping>  
                 </button>
-            </div>
+                {/* Darkmode Switch */}
+              <div>
+                <DarkMode></DarkMode>
+              </div>
+           </div>
         </div>
         {/* Lower Navber */}
         <div></div>
