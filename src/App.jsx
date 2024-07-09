@@ -5,6 +5,7 @@ import AOS from "aos";
 import "aos/dist/aos.css";
 
 import React from 'react';
+import TopProducts from './Components/TopProducts/TopProducts';
 const App = () => {
   React.useEffect(() => {
     AOS.init({
@@ -20,6 +21,7 @@ const App = () => {
       <Navber></Navber>
       <Hero></Hero>
       <Product></Product>
+      <TopProducts></TopProducts>
     </div>
   )
 }
